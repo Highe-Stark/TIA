@@ -21,7 +21,7 @@ This program is aimed to provide convience to fetch information about specialiti
     
     出国率，就业率等数据可以类似仪表盘
 
-    ![仪表盘](./img/Panel.png)
+![仪表盘](./img/Panel.png)
 
 ### · 课程详情页
     
