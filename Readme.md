@@ -2,7 +2,7 @@
 ===========
 
 ## Introduction
-    This program is aimed to provide convience to fetch information about specialities and courses for SJTUers.
+This program is aimed to provide convience to fetch information about specialities and courses for SJTUers.
 
 ## Structure
 
@@ -21,7 +21,7 @@
     
     出国率，就业率等数据可以类似仪表盘
 
-    ![仪表盘](E:\MARK 4\Pictures\Screen Shots\Panel.PNG)
+    ![仪表盘](./img/Panel.PNG)
 
 ### · 课程详情页
     
