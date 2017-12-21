@@ -28,20 +28,19 @@ export default {
   components: {
     Comment
   },
-  data: {
-    comments:[
-      { img: "@/assets/logo.png", cmtWord: "This class is good" },
-      { img: "@/assets/logo.png", cmtWord: "Fantastic!"}
-    ]
-  },
   data() {
-    return this.comments;
+    return {
+      comments:[
+        { img: "@/assets/logo.png", cmtWord: "This class is good" },
+        { img: "@/assets/logo.png", cmtWord: "Fantastic!"}
+      ]
+    }
   },
   methods: {
     issue() {
       let t = document.getElementById("user-cmt");
-      console.log(t.value);
-      this.comments.push({ img: "@/assets/logo.png", cmtWord: t.value})
+      this.comments.push({ img: "@/assets/logo.png", cmtWord: t.value});
+      t.value=""
     }
   }
 }
