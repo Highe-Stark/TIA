@@ -1,5 +1,7 @@
 <template>
-  <div class="city-select">
+  <div>
+  <p>请选择专业</p>
+  <div class="major-select">
      <select v-model="selectedCollege" name="college">
        <option v-for="(item, index) in colleges"
          v-if="item.level === 1"
@@ -21,7 +23,11 @@
          {{ item.name }}
        </option>
      </select>
-   </div>
+  </div>
+  <div>
+
+  </div>
+</div>
 </template>
 
 <script>
@@ -40,7 +46,6 @@ export default {
     }
   },
   created() {
-     // 数据初始化,默认选中北京市,默认选中第一个;北京市数据为总数据的前18个
      let dianyuan = this.colleges.slice(0, 16)
      this.classes = dianyuan.filter(item => {
        if (item.level === 2) {
@@ -63,7 +68,6 @@ export default {
            }
         })
        var _this = this
-       // 此时在渲染DOM,渲染结束之后再选中第一个
        Vue.nextTick(() => {
          _this.selectedClass = _this.classes[0]
          _this.$emit('input', _this.info)
@@ -76,10 +80,7 @@ export default {
          _this.$emit('input', _this.info)
        })
      },
-
-     selectedClass(newVal) {
-       // 选择了一个市,要选择区了 di是城市的代表,sheng
-       
+     selectedClass(newVal) { 
          this.majors = this.colleges.filter(item => {
            if (item.level === 3 && item.yuan && item.yuan == newVal.yuan && item.lei === newVal.lei) {
              return true
@@ -88,7 +89,6 @@ export default {
        var _this = this
        Vue.nextTick(() => {
          _this.selectedMajor = _this.majors[0]
-         // 触发与 v-model相关的 input事件
          _this.$emit('input', _this.info)
        })
      }
