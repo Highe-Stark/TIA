@@ -1,11 +1,9 @@
 <template>
-  <div app=Comment>
-    <!--<h1>Comment Pane</h1>-->
-    <!--<p>Welcome to comment pane, make comments about course/speciality here</p>-->
-    <img src="../assets/face.png" alt="face" height="36rem" width="36rem" class="img-circle">
-    <p class="Card">{{comment}}</p>
-    <!--<div id="cmt">Comments</div>-->
-    <router-view/>
+  <div id="Comment" >
+    <img id = 'face' src="../assets/face.png" alt="face" height="36rem" width="36rem" class="img-circle">
+    <p class="card cmt" v-text='cmt'></p>
+    <button v-on:click="numSup = numSup + 1" value=" ^ " class="btn btn-primary">Support</button>
+    <button v-on:click="numOpp = numOpp + 1" value=" v " class="btn btn-primary">Oppose</button>
   </div>
 </template>
 
@@ -13,10 +11,16 @@
 export default {
   name: 'Comment',
   props: [
-    'img', 'text'
+    'cmmt'
   ],
-  data() {
-    return { comment: "Good" }
+  data: function() {
+    return { img: this.cmmt.fimg, cmt: this.cmmt.fcmt, numSup: this.cmmt.Sup, numOpp: this.cmmt.Opp };
+  },
+  computed: {
+    createCmt: function() {
+      let faceImg = document.getElementById('face');
+      faceImg.src=this.img;
+    }
   }
 }
 </script>
