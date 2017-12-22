@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-   
+   <img src="./assets/Christmas3.png">
     <router-view/>
   </div>
 </template>
