@@ -23,11 +23,12 @@
 </template>
 
 <script>
+import originOptions from './curriculum.js'
 export default {
   name: 'single-select',
   data(){
     return{
-      originOptions: [],
+      originOptions,
       displayOptions: [],
       show: false,
       search: '',
@@ -37,31 +38,10 @@ export default {
     }
   }
 },
-  props:['optionsdata','selecteddata'],
   ready: function(){
 		window.addEventListener('click',this.blur)
-		//console.log(JSON.stringify(this.data))
 	},
-    watch: {
-        optionsdata: function (val, oldVal) {
-            // console.log('option old: ' + JSON.stringify(oldVal))
-            // console.log('option new: ' + JSON.stringify(val))
-            this.originOptions = val;
-            this.show = false;
-            // 默认值
-            if (this.selected.id == ''){
-                this.selected = this.originOptions[0];
-            }
-
-        },
-        selecteddata: function(val, oldVal){
-            // console.log('selected old: ' + JSON.stringify(oldVal))
-            // console.log('selectednew: ' + JSON.stringify(val))
-            this.selected = val
-        }
-
-    },
-    methods:{
+   methods:{
           singleFocus: function(){
               if (!this.show){
                   document.body.click();
@@ -84,11 +64,9 @@ export default {
           },
           singleSelect: function(id){
               var mySelf = this;
-              // var originOptions = mySelf.single.originOptions;
               var displayOptions = mySelf.displayOptions;
               for (var i=0; i<displayOptions.length;i++){
                   var item = displayOptions[i]
-                  //在展示数组里找 找到后1.添加到selected
                   if (item.id == id){
                       var selected = mySelf.selected;
                       selected.id = item.id
@@ -97,24 +75,17 @@ export default {
               }
               mySelf.show = false;
               this.search = '';
-              //传递给父级组件
-              // console.log('派发！！')
               this.$dispatch('selected', this.selected)
-              // console.log('选中的是' + JSON.stringify(this.selected))
           },
           singleSearch: function(){
               var mySelf = this;
               var search = mySelf.search;
-              var REG_RULE = new RegExp(search,"i") //根据用户输入值做正则
+              var REG_RULE = new RegExp(search,"i")
               var originOptions = mySelf.originOptions;
-              //将展示列表置空 然后用正则去原始列表中匹配
               mySelf.displayOptions = [];
 
-              //console.log('搜索的内容是' + search)
               for (var i=0;i<originOptions.length;i++){
                   var item = originOptions[i]
-                  // console.log('当前校验的是' + item.name)
-                  // console.log('校验的结果是' + REG_RULE.test(item.name))
                   if (REG_RULE.test(item.name)){
                       mySelf.displayOptions.push(item)
                   }
