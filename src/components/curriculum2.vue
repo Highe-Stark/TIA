@@ -79,5 +79,5 @@ export default {
 </script>
 
 <style>
-
+  @import '../../static/select-vue-component.css'
 </style>
