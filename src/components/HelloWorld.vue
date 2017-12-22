@@ -1,12 +1,16 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <Major-component></Major-component>
   </div>
 </template>
 
 <script>
+import Major from './Major.vue'
 export default {
   name: 'HelloWorld',
+  components: {
+    'Major-component': Major
+  },
   data () {
     return {
       
