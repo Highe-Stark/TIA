@@ -1,6 +1,7 @@
 <template>
   <div id="app">
    <img src="./assets/Christmas3.png">
+   <Major></Major>
     <router-view></router-view>
   </div>
 </template>
@@ -9,9 +10,9 @@
 import Major from './components/Major'
 export default {
   name: 'app',
-  components: [
+  components: {
     Major
-  ]
+  }
 }
 </script>
 
