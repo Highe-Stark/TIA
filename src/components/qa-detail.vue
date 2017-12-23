@@ -47,7 +47,7 @@ export default{
   data () {
     return {
       item: this.data.todos[this.$route.params.id],
-      list:[],
+      list: this.data.todos[this.$route.params.id].answers,
       username:'',
       content:'',
       show:false
