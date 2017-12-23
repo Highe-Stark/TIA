@@ -2,14 +2,14 @@
 <section >
   <head-bar headtext="问题详情"></head-bar>
   <div  id="qa-detail" class="container" style="background-color:white">
-    <div class="col-xs-10 col-xs-offset-1 text-center panel panel-default"style="background-color: #FFFFFF;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;height:100px">
+    <div class="col-xs-10 col-xs-offset-1 text-center panel panel-default"style="background-color: #FFFFFF;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444">
       <div class ="panel-body">
       <p style="margin-top:25px">{{item.question}}</p>
       <p class="text-right" >{{'——'+item.name+' '+item.time}}</p>
     </div>
     </div>
 
-    <div id="split-border" style="margin-top:120px"></div>
+    <div id="split-border" style="margin-top:150px"></div>
     <h1 class = "text-left" style="color: #2c3e50">回答区：</h1>
     <table class="table">
       <tbody class="text-center" v-for="ele in list">
