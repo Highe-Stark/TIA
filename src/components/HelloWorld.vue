@@ -1,6 +1,6 @@
-<template>
+<template>  
   <div class="hello">
-    <Major-component></Major-component>
+    <div class ="b1"><Major-component></Major-component></div>
   </div>
 </template>
 
@@ -9,7 +9,7 @@ import Major from './Major.vue'
 export default {
   name: 'HelloWorld',
   components: {
-    'Major-component': Major
+    'Major-component': Major,
   },
   data () {
     return {
@@ -25,4 +25,7 @@ export default {
 a {
   color: #42b983;
 }
+.b1 {
+  display : inline;
+  }
 </style>

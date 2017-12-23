@@ -1,15 +1,15 @@
 <template>
 <div>
-    <div class="container" >
+  <div class="container">
         <div class="row">
-            <div class="col-xs-5 col-xs-offset-1">
+            <div class="col-xs-5 ">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                    <h3 class = "panel-title">专业查询</h3>
+                    <h3 class = "panel-title">课程安排</h3>
                     </div>
                     <div class="panel-body">
-                            <div class="functional-select-wrapper" v-on:click.stop="singleFocus()" id="box1">
-                                <label for = "专业选择" class ="display-container clearfix" v-bind:class="(show)? 'single-select-focus':''">
+                        <div class="functional-select-wrapper1" v-on:click.stop="singleFocus()" id="box3">
+                                <label for = "课程安排" class ="display-container clearfix" v-bind:class="(show)? 'single-select-focus':''">
                                             <p v-show="selected.id==''">
                                                 <span v-if="originOptions.length != 0">请选择</span>
                                                 <span v-else>没有选项</span>
@@ -26,34 +26,27 @@
                                             <li v-for= "item in displayOptions" v-on:click.stop.prevent="singleSelect(item.id)" v-bind:key =" (item.id == selected.id)?'selected':'' ">{{item.name}}</li>
                                         </ul>
                                     </div>
+                                <!--<input ref="txtMajor" type = "专业选择" class ="form-control" @input="checkMajorValidation" id ="专业选择" placeholder = "专业名称" autofocus required />-->
                             </div>
-                            <div id="box2">
+                            <div id="box4">
                                 <button class="btn btn-primary pull-right" >查询</button>
                             </div>
                     </div>
-                </div> <!-- end major panel-->
-            </div><!--end major column-->
-        <Class-component></Class-component> 
+                </div> <!-- end panel-->
+            </div><!--end column-->
         </div><!--end row-->
-    </div>
+  </div>
 </div>
 </template>
-
+  
+ 
 <script>
-    import Class from "./Class.vue";
-    import originOptions from "./Majors.js";
-
+    import originOptions from "./curriculum.js";
     export default {
-        name: 'Major',
-        components:{
-            'Class-component':Class,
-        },
-        
+        name: 'Class',
         data(){
             return {
                 //Todo : local data here
-                majorSuccessClass: '',
-                majorIconClass:'',
                 originOptions,
                 displayOptions: [],
                 show: false,
@@ -68,23 +61,6 @@
             window.addEventListener("click", this.blur);
         },
         methods:{
-            //checkMajorValidation : function(){
-                //Todo : check the major validation
-            //    if(this.$refs.txtMajor.checkValidity()){
-            //        this.majorSuccessClass='has-success',
-            //        this.majorIconClass='glyphicon glyphicon-ok form-control-feedback'
-            //    }
-            //    else{
-            //        this.majorSuccessClass='has-error',
-            //        this.majorIconClass='glyphicon glyphicon-remove form-control-feedback'
-            //    }
-            //},
-            //InquireMajor : function(){
-                //Todo : inquire for major information
-            //},
-            //InquireClass : function(){
-                //Todo : inquire for class information
-            //},
             myEmit(){
                 this.$emit('pass',this.selected.id)
             },
@@ -119,7 +95,6 @@
                 }
             mySelf.show = false;
             this.search = '';
-            //this.$dispatch("selected", this.selected);
             },
             singleSearch: function() {
                 var mySelf = this;
@@ -142,10 +117,9 @@
             }
         }
     }
-    
 </script>
 
-<<style >
+<style >
 /*@import '../../static/select-vue-component.css'*/
   @charset "UTF-8";
   body,div,section,ul,li,p,img,dl,dt,dd,table,tr,td,input,button,h1,h2,h3,h4,h5,h6,fieldset{margin: 0px;padding: 0px;font-family: "Microsoft Yahei";}
@@ -166,7 +140,7 @@
   	margin: 20px;
   }
 
-  #box1{
+  #box3{
     float:left
   }
 
@@ -176,14 +150,14 @@
   }
 
   /*功能下拉框 整体壁纸*/
-  .functional-select-wrapper{
+  .functional-select-wrapper1{
   	width: 80%;
   	position: relative;
   	font-size: 14px;
   }
 
   /*展示容器*/
-  .functional-select-wrapper .display-container{
+  .functional-select-wrapper1 .display-container{
   	width: 100%;
   	min-height: 40px;
   	box-sizing: border-box;
@@ -198,18 +172,18 @@
   	cursor: pointer;
   }
 
-  .functional-select-wrapper .display-container .single-selected{
+  .functional-select-wrapper1 .display-container .single-selected{
   	float: left;
   }
 
   /*单选 搜索框获取焦点后 display-container下边框圆弧去掉radius*/
-  .functional-select-wrapper .single-selected-focus{
+  .functional-select-wrapper1 .single-selected-focus{
   	border-bottom-left-radius: 0px;
   	border-bottom-right-radius: 0px;
   	transition: all 0.5s ease;
   }
 
-  .functional-select-wrapper .display-container .drop{
+  .functional-select-wrapper1 .display-container .drop{
   	position: absolute;
   	top: 4px;
   	right: 6px;
@@ -218,12 +192,12 @@
   	transition: all 0.5s ease;
   }
 
-  .functional-select-wrapper .display-container .drop-up{
+  .functional-select-wrapper1 .display-container .drop-up{
   	transform: rotate(180deg);
   }
 
   /*选项容器*/
-  .functional-select-wrapper .options-container{
+  .functional-select-wrapper1 .options-container{
   	width: 100%;
   	border: 1px solid #CCC;
   	background-color: #FFF;
@@ -237,12 +211,12 @@
   	z-index: 1;
   }
 
-  .functional-select-wrapper .options-container .search-container{
+  .functional-select-wrapper1 .options-container .search-container{
   	display: block;
   	padding: 5px;
   }
 
-  .functional-select-wrapper .options-container .search-container input{
+  .functional-select-wrapper1 .options-container .search-container input{
   	width: 100%;
   	height: 30px;
   	box-sizing: border-box;
@@ -251,7 +225,7 @@
   	border-radius: 4px;
   }
 
-  .functional-select-wrapper .options-container .options-ul-list{
+  .functional-select-wrapper1 .options-container .options-ul-list{
   	max-height: 160px;
   	list-style-type: none;
   	overflow-x: visible;
@@ -259,7 +233,7 @@
   	cursor: pointer;
   }
 
-  .functional-select-wrapper .options-container .options-ul-list li{
+  .functional-select-wrapper1 .options-container .options-ul-list li{
   	height: 32px;
   	line-height: 20px;
   	box-sizing: border-box;
@@ -267,17 +241,17 @@
   	padding: 6px;
   }
 
-  .functional-select-wrapper .options-container .options-ul-list li:hover{
+  .functional-select-wrapper1 .options-container .options-ul-list li:hover{
   	background-color: #5897fb;
   	color: #FFF;
   	transition: all 0.3s ease;
   }
 
-  .functional-select-wrapper .options-container .options-ul-list .selected{
+  .functional-select-wrapper1 .options-container .options-ul-list .selected{
   	background-color: #DDD;
   }
   /*单个选中的item*/
-  .functional-select-wrapper .multiple-selected-item{
+  .functional-select-wrapper1 .multiple-selected-item{
   	width: auto;
   	height: 20px;
   	line-height: 15px;
@@ -292,7 +266,7 @@
   	background: #eee;
   }
 
-  .functional-select-wrapper .multiple-selected-item i{
+  .functional-select-wrapper1 .multiple-selected-item i{
   	font-style: normal;
   	position: absolute;
   	right: 3px;
@@ -301,8 +275,9 @@
   	color: #aaa;
   }
 
-  .functional-select-wrapper .multiple-selected-item i:hover{
+  .functional-select-wrapper1 .multiple-selected-item i:hover{
   	font-weight: bolder;
   	color: #000;
   }
 </style>
+
