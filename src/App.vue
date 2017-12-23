@@ -6,8 +6,12 @@
 </template>
 
 <script>
+import Major from './components/Major'
 export default {
-  name: 'app'
+  name: 'app',
+  components: [
+    Major
+  ]
 }
 </script>
 
