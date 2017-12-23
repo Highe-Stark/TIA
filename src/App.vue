@@ -1,18 +1,17 @@
 <template>
   <div id="app">
-    <!--<img src="./assets/logo.png">-->
-    <!--<router-link to="/components/comment">Comment Pane</router-link>-->
-    <!--<layout></layout>-->
-    <router-view/>
+   <img src="./assets/Christmas3.png">
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+import Major from './components/Major'
 export default {
-  name: 'app'
-  // components: [
-  //  layout
-  // ]
+  name: 'app',
+  components: [
+    Major
+  ]
 }
 </script>
 
@@ -24,5 +23,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+ 
 }
 </style>
