@@ -1,30 +1,32 @@
 <template>
   <div id="container" class="container">
     <div id="page">
-      <h1 class="alert alert-primary">Comment</h1>
+      <div class="jumbotron">
+        <h1 style="color: rgb(255,255,240)">Comment</h1>
+      </div>
       <span id="cmt-pane" v-for="cmt in comments" v-bind:key="cmt.cmtWord" class="row">
         <div class="cmt row">
           <div>
             <img src="../assets/logo.png" alt="face" class="card-img-top img-circle cmt" height="45rem" width="45rem">
           </div>
           <div>
-            <span v-html='cmt.cmtWord'></span>
+            <span id="cmtcnt" v-html='cmt.cmtWord'></span>
           </div>
-          <div>
+          <div align="right">
             <p class="time">{{cmt.time}}</p>
+            <button type="button" v-on:click="support(cmt)" class="btn btn-primary btn-sm">
+              <span class="glyphicon glyphicon-chevron-up"></span>
+              <span class="badge">{{cmt.numSup}}</span>
+            </button>
+            <button type="button" v-on:click="oppose(cmt)" class="btn btn-primary btn-sm">
+              <span class="glyphicon glyphicon-chevron-down"></span>
+              <span class="badge">{{cmt.numOpp}}</span>
+            </button>
           </div>
-          <button type="button" v-on:click="support(cmt)" class="btn btn-primary btn-sm">
-            <span class="glyphicon glyphicon-chevron-up"></span>
-            <span class="badge">{{cmt.numSup}}</span>
-          </button>
-          <button type="button" v-on:click="oppose(cmt)" class="btn btn-primary btn-sm">
-            <span class="glyphicon glyphicon-chevron-down"></span>
-            <span class="badge">{{cmt.numOpp}}</span>
-          </button>
         </div>
       </span>
     </div>
-    <div id="input-pane" class="footer">
+    <div id="input-pane" class="footer" align="center">
       <textarea class="form-control" id="user-cmt" placeholder="Give your comment here..."></textarea>
       <button id="post" class="btn btn-primary btn-block" v-on:click="issue" >
         <span class="glyphicon glyphicon-send"></span>
@@ -82,25 +84,36 @@ export default {
   height: 100%;
   padding-right: 0.25rem;
   padding-left: 0.25rem;
-  background-color:rgba(75, 250, 192, 0.575);
+  background-color:rgba(243, 247, 243, 0.877);
 }
 #page {
   min-height: 100%;
   padding-bottom: 110px;
+  background-color:ivory;
 }
 h1 {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: ivory;
-  background-color: aqua;
+  background-color: rgba(94, 121, 121, 0.507);
+}
+#cmtcnt {
+  font-size: 2.5rem;
+  margin-top: 2.4rem;
+  padding-left: 2rem;
+  padding-right: 0.3rem;
 }
 .cmt {
-  margin-top:0.5rem;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   margin-left: 0.4rem;
   margin-right: 0.4rem;
   text-align: left;
   padding:0.5rem;
   font-size: large;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(178, 169, 157, 0.9);
 }
 .time {
   font-size: 0.3rem;
