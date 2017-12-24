@@ -21,7 +21,7 @@
 
       </div>
       <div id="box2">
-        <button @click="myEmit" class="btn btn-info" type="button">查询</button>
+        <button @click="myEmit" class="btn btn-danger" type="button">查询</button>
       </div>
     </div>
 </template>
