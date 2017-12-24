@@ -1,22 +1,22 @@
 <template>
   <div>
-  <p>请选择专业</p>
+  <p style="display:none">请选择专业</p>
   <div class="major-select">
-     <select v-model="selectedCollege" name="college">
+     <select v-model="selectedCollege" name="college" class="selectpicker btn btn-danger">
        <option v-for="(item, index) in colleges"
          v-if="item.level === 1"
          :value="item">
          {{ item.name }}
        </option>
      </select>
-     <select v-model="selectedClass" name="class">
+     <select v-model="selectedClass" name="class" class="selectpicker btn btn-danger">
        <option
          v-for="(item, index) in classes"
          :value="item">
          {{ item.name }}
        </option>
      </select>
-     <select v-model="selectedMajor" name="major">
+     <select v-model="selectedMajor" name="major" class="selectpicker btn btn-danger">
        <option
          v-for="(item, index) in majors"
          :value="item">
@@ -109,5 +109,7 @@ export default {
 </script>
 
 <style>
-
+.btn-danger{
+  background-color:#e96d6d
+}
 </style>

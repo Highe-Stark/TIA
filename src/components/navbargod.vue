@@ -48,6 +48,6 @@ export default {
 .text-muted{
   font-weight:600;
   font-size:medium;
-  color:#ba455a;
+  color:#af4155;
 }
 </style>

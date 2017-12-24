@@ -7,12 +7,16 @@
       <navbargod />
     </div>
     <hr />
+    <div id="selectMajor">
+      <majors />
+    </div>
 
 
   </div>
 </template>
 
 <script>
+import majors from './majors.vue'
 import navbargod from './navbargod.vue'
 export default {
   name: 'DoM',
@@ -21,6 +25,7 @@ export default {
     },
   components: {
     navbargod,
+    majors
   }
 }
 </script>
