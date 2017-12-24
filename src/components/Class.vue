@@ -29,7 +29,7 @@
                                 <!--<input ref="txtMajor" type = "专业选择" class ="form-control" @input="checkMajorValidation" id ="专业选择" placeholder = "专业名称" autofocus required />-->
                             </div>
                             <div id="box4">
-                                <router-link to="/DoM"><button class="btn btn-primary pull-right" >查询</button></router-link>
+                                <router-link to="/DoC"><button class="btn btn-primary pull-right" @click="sendparams">查询</button></router-link>
                             </div>
                     </div>
                 </div> <!-- end panel-->
@@ -42,6 +42,7 @@
 
 <script>
     import originOptions from "./curriculum.js";
+
     export default {
         name: 'Class',
         data(){
@@ -61,6 +62,18 @@
             window.addEventListener("click", this.blur);
         },
         methods:{
+            sendparams(){
+              this.$router.push({
+            path: '/DoC',
+            name: 'DoC',
+            query: {
+                name: 'id',
+                dataObj: this.selected.id
+            }
+        })
+
+            },
+
             myEmit(){
                 this.$emit('pass',this.selected.id)
             },

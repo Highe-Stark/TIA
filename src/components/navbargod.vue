@@ -2,12 +2,12 @@
 <div id="container">
   <nav>
             <ul class="nav nav-justified">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Downloads</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
+              <li class="active"><a href="/"><span class="text-muted">首页</span></a></li>
+              <li><a href="/DoM"><span class="text-muted">专业查询</span></a></li>
+              <li><a href="/DoC"><span class="text-muted">课程查询</span></a></li>
+              <li><a href="#"><span class="text-muted">资料下载</span></a></li>
+              <li><a href="#"><span class="text-muted">关于我们</span></a></li>
+              <li><a href="#"><span class="text-muted">联系方式</span></a></li>
             </ul>
           </nav>
 
@@ -44,5 +44,10 @@ export default {
 }
 .nav-pills{
 
+}
+.text-muted{
+  font-weight:600;
+  font-size:medium;
+  color:#ba455a;
 }
 </style>

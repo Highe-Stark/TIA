@@ -29,7 +29,7 @@
                                     </div>
                             </div>
                             <div id="box2">
-                                <button class="btn btn-primary pull-right" >查询</button>
+                                <router-link to="/DoM"><button class="btn btn-primary pull-right" >查询</button></router-link>
                             </div>
                     </div>
                 </div> <!-- end major panel-->

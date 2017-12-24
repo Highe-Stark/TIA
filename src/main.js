@@ -2,7 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App'
 import routers from './routers'
-import DoM from './components/DoM'
 
 // import data from './data'
 
