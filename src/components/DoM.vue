@@ -1,5 +1,5 @@
 <template>
-  <div id="container">
+  <div class="container">
     <div>
       <header id="head">
         <img src="../assets/head.jpg" id="headdd" />
@@ -7,7 +7,7 @@
       <navbargod />
     </div>
     <hr />
-    <div id="selectMajor">
+    <div id="row" class="slectMajor">
       <majors />
     </div>
 
@@ -15,8 +15,8 @@
       <tabs2 />
     </div>
     <hr />
-    <div class="col-sm-4">
-      <div class="panel panel-danger box1">
+    <div class="col-sm-4" id="row">
+      <div class="panel panel-danger box1" id="column">
         <div class="panel-heading">
           <h3 class="panel-title"><a href="">问答区</a></h3>
         </div>
@@ -24,7 +24,7 @@
           Panel content
         </div>
       </div>
-              <div class="panel panel-info box2">
+              <div class="panel panel-info box2" id="column">
                 <div class="panel-heading">
                   <h3 class="panel-title"><a href="">评论区</a></h3>
                 </div>
@@ -56,6 +56,12 @@ export default {
 </script>
 
 <style>
+#headdd{
+  width:100%
+}
+body,td,th {
+  font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 12px;color: #1d1007; line-height:24px
+}
 .box1, .box2{
 
 }
