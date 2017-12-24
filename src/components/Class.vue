@@ -3,7 +3,7 @@
   <div class="container">
         <div class="row">
             <div class="col-xs-5 ">
-                <div class="panel panel-primary">
+                <div class="panel panel-danger">
                     <div class="panel-heading">
                     <h3 class = "panel-title">课程安排</h3>
                     </div>
@@ -21,7 +21,7 @@
                                         <div class="search-container">
                                             <input placeholder="输入课程名称或编码查询" class="search-input" v-model="search" v-on:keyup="singleSearch()" v-on:click.stop />
                                         </div>
-                                        <ul class="option-ul-list">
+                                        <ul class="option-ul-list bb">
                                             <li v-show= "displayOptions.length ==0 ">没有查询到数据</li>
                                             <li v-for= "item in displayOptions" v-on:click.stop.prevent="singleSelect(item.id)" v-bind:key =" (item.id == selected.id)?'selected':'' ">{{item.name}}</li>
                                         </ul>
@@ -29,7 +29,7 @@
                                 <!--<input ref="txtMajor" type = "专业选择" class ="form-control" @input="checkMajorValidation" id ="专业选择" placeholder = "专业名称" autofocus required />-->
                             </div>
                             <div id="box4">
-                                <router-link to="/DoC"><button class="btn btn-primary pull-right" @click="sendparams">查询</button></router-link>
+                                <router-link to="/DoC"><button class="btn btn-danger pull-right" @click="sendparams">查询</button></router-link>
                             </div>
                     </div>
                 </div> <!-- end panel-->
@@ -291,5 +291,11 @@
   .functional-select-wrapper1 .multiple-selected-item i:hover{
   	font-weight: bolder;
   	color: #000;
+  }
+  .bb{
+    text-align:left;
+  }
+  .btn{
+    background-color:#e96d6d;
   }
 </style>

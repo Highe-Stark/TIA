@@ -13,7 +13,7 @@
               <div class="search-container">
                   <input placeholder="输入课程名称或编码查询" class="search-input" v-model="search" v-on:keyup="singleSearch()" v-on:click.stop />
               </div>
-              <ul class="options-ul-list">
+              <ul class="options-ul-list bb">
                   <li v-show="displayOptions.length == 0">没有查询到数据</li>
                   <li v-for="item in displayOptions" v-on:click.stop.prevent="singleSelect(item.id)" v-bind:class=" (item.id == selected.id)?'selected':'' ">{{ item.name }}</li>
               </ul>
@@ -117,7 +117,9 @@ export default {
   	outline:0;
   	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   }
-
+  .btn{
+    background-color:#e96d6d;
+  }
   input:focus,select:focus,textarea:focus{
   	border-color: rgba(82,168,236,.8);
   	box-shadow: 0 0 8px rgba(82,168,236,.6);
@@ -130,7 +132,8 @@ export default {
   }
 
   #box1,#box2{
-    float:left
+    float:left;
+    margin:0 0 0 30px ;
   }
 
   .wrapper{
@@ -267,6 +270,9 @@ export default {
   .functional-select-wrapper .multiple-selected-item i:hover{
   	font-weight: bolder;
   	color: #000;
+  }
+  .bb{
+    text-align:left;
   }
 
 

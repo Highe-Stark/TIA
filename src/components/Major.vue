@@ -4,7 +4,7 @@
         <img src="../assets/Christmas3.png">
         <div class="row">
             <div class="col-xs-5 col-xs-offset-1">
-                <div class="panel panel-primary">
+                <div class="panel panel-danger">
                     <div class="panel-heading">
                     <h3 class = "panel-title">专业查询</h3>
                     </div>
@@ -22,14 +22,14 @@
                                         <div class="search-container">
                                             <input placeholder="输入课程名称或编码查询" class="search-input" v-model="search" v-on:keyup="singleSearch()" v-on:click.stop />
                                         </div>
-                                        <ul class="option-ul-list">
+                                        <ul class="option-ul-list bb">
                                             <li v-show= "displayOptions.length ==0 ">没有查询到数据</li>
                                             <li v-for= "item in displayOptions" v-on:click.stop.prevent="singleSelect(item.id)" v-bind:key =" (item.id == selected.id)?'selected':'' ">{{item.name}}</li>
                                         </ul>
                                     </div>
                             </div>
                             <div id="box2">
-                                <router-link to="/DoM"><button class="btn btn-primary pull-right" >查询</button></router-link>
+                                <router-link to="/DoM"><button class="btn btn-danger pull-right" >查询</button></router-link>
                             </div>
                     </div>
                 </div> <!-- end major panel-->
@@ -146,7 +146,7 @@
 
 </script>
 
-<<style >
+<style >
 /*@import '../../static/select-vue-component.css'*/
   @charset "UTF-8";
   body,div,section,ul,li,p,img,dl,dt,dd,table,tr,td,input,button,h1,h2,h3,h4,h5,h6,fieldset{margin: 0px;padding: 0px;font-family: "Microsoft Yahei";}
@@ -155,12 +155,13 @@
   	outline:0;
   	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
   }
-
   input:focus,select:focus,textarea:focus{
   	border-color: rgba(82,168,236,.8);
   	box-shadow: 0 0 8px rgba(82,168,236,.6);
   }
-
+  .btn{
+    background-color:#e96d6d;
+  }
   .clearfix:after {content: "."; height: 0px; display: block; clear: both; visibility: hidden;}
 
   h3{
@@ -305,5 +306,8 @@
   .functional-select-wrapper .multiple-selected-item i:hover{
   	font-weight: bolder;
   	color: #000;
+  }
+  .bb{
+    text-align:left;
   }
 </style>
