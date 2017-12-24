@@ -7,21 +7,25 @@
       <navbargod />
     </div>
     <hr />
-    <div id="row">
+    <div id="row" class="selectbar">
       <singleselect @pass="pass"></singleselect>
     </div>
+    <br />
+    <br />
   <div id="row">
-    <tabs :detailselected="detailselected" />
+    <tabs1 :detailselected="detailselected" />
   </div>
 <p>{{selectedid}}</p>
+  <hr />
   </div>
+
 </template>
 
 <script>
 import singleselect from './singleselect'
 import details from './details.js'
 import navbargod from './navbargod.vue'
-import tabs from './tabs.vue'
+import tabs1 from './tabs1.vue'
 
 export default {
   name:"DoC",
@@ -74,7 +78,7 @@ export default {
   components: {
     singleselect,
     navbargod,
-    tabs,
+    tabs1,
   }
 }
 </script>
@@ -83,5 +87,8 @@ export default {
 #headdd{
   width:100%;
 }
-body,td,th {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 12px;color: #1d1007; line-height:24px} 
+body,td,th {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 12px;color: #1d1007; line-height:24px}
+.selectbar{
+
+}
 </style>

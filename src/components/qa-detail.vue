@@ -40,7 +40,7 @@
 <script>
 import HeadBar from './head-bar'
 export default{
-  name:'qa-detail',
+  name:'qadetail',
   components: {
     HeadBar
   },

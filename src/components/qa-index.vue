@@ -35,7 +35,7 @@
 
 <script>
 export default {
-  name: 'qa',
+  name: 'qaindex',
   data () {
     return {
        todos: this.data.todos,
