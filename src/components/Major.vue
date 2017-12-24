@@ -20,7 +20,7 @@
                                 </label>
                                     <div class="options-container" v-show="show">
                                         <div class="search-container">
-                                            <input placeholder="输入课程名称或编码查询" class="search-input" v-model="search" v-on:keyup="singleSearch()" v-on:click.stop />
+                                            <input placeholder="输入专业名称查询" class="search-input" v-model="search" v-on:keyup="singleSearch()" v-on:click.stop />
                                         </div>
                                         <ul class="option-ul-list bb">
                                             <li v-show= "displayOptions.length ==0 ">没有查询到数据</li>
