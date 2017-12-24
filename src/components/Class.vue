@@ -13,7 +13,7 @@
                                             <p v-show="selected.id==''">
                                                 <span v-if="originOptions.length != 0">请选择</span>
                                                 <span v-else>没有选项</span>
-                                            </p>    
+                                            </p>
                                             <p class="single-selected">{{selected.name}}</p>
                                     <i class="drop" v-bind:class="(show)?'drop-up':''">▼</i>
                                 </label>
@@ -29,7 +29,7 @@
                                 <!--<input ref="txtMajor" type = "专业选择" class ="form-control" @input="checkMajorValidation" id ="专业选择" placeholder = "专业名称" autofocus required />-->
                             </div>
                             <div id="box4">
-                                <button class="btn btn-primary pull-right" >查询</button>
+                                <router-link to="/DoM"><button class="btn btn-primary pull-right" >查询</button></router-link>
                             </div>
                     </div>
                 </div> <!-- end panel-->
@@ -38,8 +38,8 @@
   </div>
 </div>
 </template>
-  
- 
+
+
 <script>
     import originOptions from "./curriculum.js";
     export default {
@@ -280,4 +280,3 @@
   	color: #000;
   }
 </style>
-

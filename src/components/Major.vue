@@ -1,6 +1,7 @@
 <template>
 <div>
     <div class="container" >
+        <img src="../assets/Christmas3.png">
         <div class="row">
             <div class="col-xs-5 col-xs-offset-1">
                 <div class="panel panel-primary">
@@ -13,7 +14,7 @@
                                             <p v-show="selected.id==''">
                                                 <span v-if="originOptions.length != 0">请选择</span>
                                                 <span v-else>没有选项</span>
-                                            </p>    
+                                            </p>
                                             <p class="single-selected">{{selected.name}}</p>
                                     <i class="drop" v-bind:class="(show)?'drop-up':''">▼</i>
                                 </label>
@@ -33,7 +34,7 @@
                     </div>
                 </div> <!-- end major panel-->
             </div><!--end major column-->
-        <Class-component></Class-component> 
+        <Class-component></Class-component>
         </div><!--end row-->
     </div>
 </div>
@@ -48,7 +49,7 @@
         components:{
             'Class-component':Class,
         },
-        
+
         data(){
             return {
                 //Todo : local data here
@@ -142,7 +143,7 @@
             }
         }
     }
-    
+
 </script>
 
 <<style >

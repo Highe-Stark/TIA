@@ -1,6 +1,7 @@
-import Major from './components/Majors'
+import Major from './components/Major'
 import Class from './components/Class'
-import majors from './components/majors'
+import majors from './components/majors.vue'
+import DoM from './components/DoM'
 
 const routers = [
     {
@@ -13,7 +14,7 @@ const routers = [
                 component: majors
             },
             {
-                path: '/', 
+                path: '/',
                 component: Class
             }
         ]
@@ -28,6 +29,11 @@ const routers = [
             }
         ]
     },
+    {
+      path: '/DoM',
+      name: 'DoM',
+      component: DoM
+    }
 ]
 
 export default routers
