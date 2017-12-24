@@ -1,18 +1,13 @@
 <template>
   <div id="app">
-   <!--<img src="./assets/Christmas3.png">-->
-   <!--<Major></Major>-->
-    <router-view></router-view>
+    <img src="./assets/logo.png">
+    <router-view/>
   </div>
 </template>
 
 <script>
-import Major from './components/Major'
 export default {
-  name: 'app',
-  components: {
-    Major
-  }
+  name: 'app'
 }
 </script>
 
@@ -24,6 +19,5 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-
 }
 </style>
