@@ -5,7 +5,7 @@
       <span id="cmt-pane" v-for="cmt in comments" v-bind:key="cmt.cmtWord" class="row">
         <div class="cmt row">
           <div>
-            <img src="../assets/logo.png" alt="face" class="card-img-top img-circle cmt" height="45rem" width="45rem">
+            <img src="@/assets/logo.png" alt="face" class="card-img-top img-circle cmt" height="45rem" width="45rem">
           </div>
           <div>
             <span v-html='cmt.cmtWord'></span>

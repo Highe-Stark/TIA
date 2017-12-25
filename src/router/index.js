@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 import qaDetail from '../components/qa-detail'
 import qaIndex from '../components/qa-index'
-import layout from '@/components/layout'
+import layout from '@/components/children/layout'
 
 
 Vue.use(Router)
