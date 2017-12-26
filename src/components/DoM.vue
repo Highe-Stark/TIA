@@ -11,9 +11,6 @@
       <majors />
     </div>
 
-    <div>
-      <tabs2 />
-    </div>
     <hr />
     <div class="col-sm-4" id="row">
       <div class="panel panel-danger box1" id="column">
@@ -40,7 +37,6 @@
 <script>
 import majors from './majors.vue'
 import navbargod from './navbargod.vue'
-import tabs2 from './tabs2.vue'
 import layout from './layout.vue'
 export default {
   name: 'DoM',
@@ -50,7 +46,6 @@ export default {
   components: {
     navbargod,
     majors,
-    tabs2
   }
 }
 </script>

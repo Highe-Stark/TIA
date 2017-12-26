@@ -25,13 +25,14 @@
      </select>
   </div>
   <div>
-
+    <tabs2 v-bind:detailselected= "this.selectedMajor" ></tabs2>
   </div>
 </div>
 </template>
 
 <script>
 import colleges from './colleges.js'
+import tabs2 from './tabs2.vue'
 import Vue from 'vue'
 export default {
   name: 'majors',
@@ -93,6 +94,9 @@ export default {
        })
      }
    },
+  components:{
+    tabs2
+  },
   computed: {
      info() {
        return {
@@ -112,4 +116,12 @@ export default {
 .btn-danger{
   background-color:#e96d6d
 }
+pre {
+white-space: pre-wrap; /*css-3*/
+white-space: -moz-pre-wrap; /*Mozilla,since1999*/
+white-space: -pre-wrap; /*Opera4-6*/
+white-space: -o-pre-wrap; /*Opera7*/
+word-wrap: break-word; /*InternetExplorer5.5+*/
+}
+
 </style>
