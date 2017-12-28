@@ -8,9 +8,9 @@ import routers from './routers'
 //import qa from './components/qa'
 //import tabs2 from './components/tabs2'
 
-// import data from './data'
+import data from './components/data'
 
-// Vue.prototype.data = data
+Vue.prototype.data = data
 
 Vue.use (VueRouter)
 

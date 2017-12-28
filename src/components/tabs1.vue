@@ -25,7 +25,7 @@
 		</div>
 	</div>
 	<div class="tab-pane fade" id="data">
-		<p>jMeter 是一款开源的测试软件。它是 100% 纯 Java 应用程序，用于负载和性能测试。</p>
+		<p><span class="info">书本</span>：{{detailselected.textbook}}</p>
 	</div>
 
 </div>
@@ -41,4 +41,7 @@ export default{
 </script>
 
 <style>
+p{
+	font-size: 15px;
+}
 </style>

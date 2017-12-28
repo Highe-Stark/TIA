@@ -15,15 +15,15 @@
     <div class="col-sm-4" id="row">
       <div class="panel panel-danger box1" id="column">
         <div class="panel-heading">
-          <h3 class="panel-title"><a href="">问答区</a></h3>
+          <h3 class="panel-title"><router-link :to="{ name: 'qaIndex' }">问答区</router-link></h3>
         </div>
         <div class="panel-body">
-          Panel content
+          <p>{{questions[0].question}}</p>
         </div>
       </div>
               <div class="panel panel-info box2" id="column">
                 <div class="panel-heading">
-                  <h3 class="panel-title"><a href="">评论区</a></h3>
+                  <h3 class="panel-title"><router-link :to="{ name: 'layout' }">评论区</router-link></h3>
                 </div>
                 <div class="panel-body">
                   Panel content
@@ -40,6 +40,11 @@ import navbargod from './navbargod.vue'
 import layout from './layout.vue'
 export default {
   name: 'DoM',
+  data(){
+    return {
+      questions: this.data.todos
+    }
+  },
   babel: {
         presets: ['es2015']
     },

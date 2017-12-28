@@ -15,7 +15,6 @@
   <div id="row">
     <tabs1 :detailselected="detailselected" />
   </div>
-<p>{{selectedid}}</p>
   <hr />
   </div>
 
@@ -73,6 +72,7 @@ export default {
               detailselected.number = item.number;
               detailselected.failRate = item.failRate;
               detailselected.teachers = item.teachers;
+              detailselected.textbook = item.textbook;
           }
         }
     },

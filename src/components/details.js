@@ -9,6 +9,7 @@ module.exports = [
       "highest":"99",
       "number":"1748",
       "failRate":"6.29%",
+      "textbook":"大学微积分（第二版） 上册",
       "teachers":[
         {"name":"乐经良", "average":"74.81"},
         {"name":"何铭", "average":"76.25"},
@@ -27,6 +28,7 @@ module.exports = [
       "highest":"99",
       "number":"1750",
       "failRate":"9.14%",
+      "textbool":"大学微积分（第二版） 下册",
       "teachers":[
         {"name":"乐经良", "average":"74.81"},
         {"name":"何铭", "average":"76.25"},
@@ -45,6 +47,7 @@ module.exports = [
       "highest":"100",
       "number":"371",
       "failRate":"11.59%",
+      "textbook":"线性代数",
       "teachers":[
         {"name":"乐经良", "average":"74.81"},
         {"name":"何铭", "average":"76.25"},
@@ -62,6 +65,7 @@ module.exports = [
       "average":"74.22",
       "highest":"99",
       "number":"1750",
+      "textbook":"离散数学",
       "failRate":"9.14%"
     },
     {"id":"CS902",

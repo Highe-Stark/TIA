@@ -3,6 +3,9 @@ import Class from './components/Class'
 import majors from './components/majors.vue'
 import DoC from './components/DoC'
 import DoM from './components/DoM'
+import qaIndex from './components/qa-index'
+import qaDetail from './components/qa-detail'
+import layout from './components/layout'
 
 const routers = [
     {
@@ -40,6 +43,21 @@ const routers = [
       name: 'DoM',
       component: DoM
     },
+    {
+      path: '/qaIndex',
+      name: 'qaIndex',
+      component: qaIndex
+    },
+    {
+      path :'/qaIndex/detail/:id',
+      name: 'qaDetail',
+      component: qaDetail
+    },
+    {
+      path :'/layout',
+      name:'layout',
+      component: layout
+    }
 ]
 
 export default routers

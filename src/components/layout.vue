@@ -1,5 +1,5 @@
 <template>
-  <div id="container" class="container">
+  <div id="container1" class="container">
     <div id="page">
       <h1 class="alert alert-primary">Comment</h1>
       <span id="cmt-pane" v-for="cmt in comments" v-bind:key="cmt.cmtWord" class="row">
@@ -76,7 +76,7 @@ export default {
 </script>
 
 <style>
-#container {
+#container1 {
   min-height: 100%;
   height: auto;
   height: 100%;
