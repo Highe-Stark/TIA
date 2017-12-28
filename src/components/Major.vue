@@ -65,7 +65,7 @@
                     id: "",
                     name: ""
                 },
-                current_chosen: -1,
+                current_chosen: -1,//highlight
             }
         },
         ready: function() {
