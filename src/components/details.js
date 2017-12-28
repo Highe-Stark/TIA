@@ -28,7 +28,7 @@ module.exports = [
       "highest":"99",
       "number":"1750",
       "failRate":"9.14%",
-      "textbool":"大学微积分（第二版） 下册",
+      "textbook":"大学微积分（第二版） 下册",
       "teachers":[
         {"name":"乐经良", "average":"74.81"},
         {"name":"何铭", "average":"76.25"},
