@@ -35,12 +35,12 @@ const routers = [
         ]
     },
     {
-      path: '/DoC',
+      path: '/DoC/:id',
       name: 'DoC',
       component: DoC
     },
     {
-      path: '/DoM',
+      path: '/DoM/:name',
       name: 'DoM',
       component: DoM
     },

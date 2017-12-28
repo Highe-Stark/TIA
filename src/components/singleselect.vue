@@ -50,6 +50,14 @@ export default {
         this.$emit('pass',this.selected.id)
       },
           singleFocus: function(){
+            for (var i=0; i<displayOptions.length;i++){
+                var item = displayOptions[i]
+                if (item.id == id){
+                    var selected = mySelf.selected;
+                    selected.id = item.id
+                    selected.name = item.name
+                }
+            }
               if (!this.show){
                   document.body.click();
                   console.log('single show')

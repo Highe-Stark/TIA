@@ -24,14 +24,14 @@
                                         <ul class="option-ul-list bb">
                                             <li v-show= "displayOptions.length ==0 ">没有查询到数据</li>
                                             <li v-for= "item , index in displayOptions" v-on:click.stop.prevent="singleSelect(item.id)" v-bind:key =" (item.id == selected.id)?'selected':'' ">
-                                                <p class="finger" v-bind:style="{'background-color': (index === current_chosen) ? '#00eeee' : '#ffffff'}" v-on:mouseover="current_chosen=index;" @mouseleave="current_chosen=-1;">{{item.name}}</p>
+                                                <p class="finger" v-bind:style="{'background-color': (index === current_chosen) ? '#5897fb' : '#ffffff'}" v-on:mouseover="current_chosen=index;" @mouseleave="current_chosen=-1;">{{item.name}}</p>
                                             </li>
                                         </ul>
                                     </div>
                                 <!--<input ref="txtMajor" type = "专业选择" class ="form-control" @input="checkMajorValidation" id ="专业选择" placeholder = "专业名称" autofocus required />-->
                             </div>
                             <div id="box4">
-                                <router-link to="/DoC"><button class="btn btn-danger pull-right" @click="sendparams">查询</button></router-link>
+                                <router-link :to="{name:'DoC',params:{id:selected.id}}"><button class="btn btn-danger pull-right" @click="sendparams">查询</button></router-link>
                             </div>
                     </div>
                 </div> <!-- end panel-->

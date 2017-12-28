@@ -26,11 +26,36 @@ import details from './details.js'
 import navbargod from './navbargod.vue'
 import tabs1 from './tabs1.vue'
 
+
 export default {
   name:"DoC",
+  ready: function(){
+    this.selectedid = id;
+    var details = this.details;
+    var id = this.selectedid;
+    for (var i=0; i<details.length;i++){
+        var item = details[i]
+        if (item.id == id){
+            var detailselected = this.detailselected;
+            detailselected.id = item.id;
+            detailselected.name = item.name;
+            detailselected.ename = item.ename;
+            detailselected.src = item.src;
+            detailselected.lesson = item.lesson;
+            detailselected.credit = item.credit;
+            detailselected.average = item.average;
+            detailselected.highest = item.highest;
+            detailselected.number = item.number;
+            detailselected.failRate = item.failRate;
+            detailselected.teachers = item.teachers;
+            detailselected.textbook = item.textbook;
+        }
+      }
+  },
+
   data(){
       return{
-        selectedid:null,
+        selectedid:this.$route.params.id,
         details,
         detailselected:{
           id:"",

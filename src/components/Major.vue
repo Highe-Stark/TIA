@@ -25,13 +25,13 @@
                                         <ul class="option-ul-list bb" >
                                             <li v-show= "displayOptions.length ==0 ">没有查询到数据</li>
                                             <li v-for= "item, index in displayOptions" v-on:click.stop.prevent="singleSelect(item.id)" v-bind:key =" (item.id == selected.id)?'selected':'' ">
-                                                <p class="finger" v-bind:style="{'background-color': (index === current_chosen) ? '#00eeee' : '#ffffff'}" v-on:mouseover="current_chosen=index;" @mouseleave="current_chosen=-1;">{{item.name}}</p>
+                                                <p class="finger" v-bind:style="{'background-color': (index === current_chosen) ? '#5897fb' : '#ffffff'}" v-on:mouseover="current_chosen=index;" @mouseleave="current_chosen=-1;">{{item.name}}</p>
                                             </li>
                                         </ul>
                                     </div>
                             </div>
                             <div id="box2">
-                                <router-link to="/DoM"><button class="btn btn-danger pull-right" >查询</button></router-link>
+                                <router-link :to="{name:'DoM',params:{name:selected.name}}"><button class="btn btn-danger pull-right" >查询</button></router-link>
                             </div>
                     </div>
                 </div> <!-- end major panel-->
@@ -145,7 +145,7 @@
                 this.search = "";
             }
         }
-    
+
     }
 
 </script>

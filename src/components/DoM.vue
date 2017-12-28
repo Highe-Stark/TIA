@@ -28,6 +28,7 @@
         <div class="panel-body">
           Waiting for comment...
         </div>
+        <p>{{name}}</p>
       </div>
 
     </div>
@@ -42,7 +43,8 @@ export default {
   name: 'DoM',
   data(){
     return {
-      questions: this.data.todos
+      questions: this.data.todos,
+      name:this.$route.params.name,
     }
   },
   babel: {
@@ -63,6 +65,5 @@ body,td,th {
   font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 12px;color: #1d1007; line-height:24px
 }
 .box1, .box2{
-
 }
 </style>
