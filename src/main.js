@@ -8,12 +8,20 @@ import routers from './routers'
 //import qa from './components/qa'
 //import tabs2 from './components/tabs2'
 
-import data from './data'
+// import data from './data'
 
-Vue.prototype.data = data
+// Vue.prototype.data = data
 
+Vue.use (VueRouter)
+
+const router = new VueRouter({
+  mode: 'history',
+  routes: routers
+})
+
+/* eslint-disable no-new */
 new Vue({
-  el: '#qa',
+  el: '#app',
   router,
   render: h => h(App)
 })

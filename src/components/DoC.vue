@@ -68,6 +68,11 @@ export default {
               detailselected.src = item.src;
               detailselected.lesson = item.lesson;
               detailselected.credit = item.credit;
+              detailselected.average = item.average;
+              detailselected.highest = item.highest;
+              detailselected.number = item.number;
+              detailselected.failRate = item.failRate;
+              detailselected.teachers = item.teachers;
           }
         }
     },

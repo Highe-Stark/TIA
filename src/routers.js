@@ -3,8 +3,6 @@ import Class from './components/Class'
 import majors from './components/majors.vue'
 import DoC from './components/DoC'
 import DoM from './components/DoM'
-import comment from './components/children/layout'
-import qaDetail from './components/qa-detail'
 
 const routers = [
     {
@@ -40,17 +38,7 @@ const routers = [
     {
       path: '/DoM',
       name: 'DoM',
-      component: DoM,
-      children: [
-        {
-          path: '/',
-          component: comment
-        },
-        {
-          path: '/',
-          component: qaDetail
-        }
-      ]
+      component: DoM
     },
 ]
 
