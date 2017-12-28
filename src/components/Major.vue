@@ -65,7 +65,7 @@
                     id: "",
                     name: ""
                 },
-                current_chosen: -1,//highlight
+                current_chosen: -1,//mouseover event
             }
         },
         ready: function() {
