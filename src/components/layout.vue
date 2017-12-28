@@ -34,15 +34,17 @@
 </template>
 
 <script>
+import cmts from './cmts.js'
+
 export default {
   name: 'layout',
   data() {
     return {
       nothing:'',
-      comments:[
-      ]
+      comments: cmts
     }
   },
+
   methods: {
     issue() {
       let t = document.getElementById("user-cmt")
