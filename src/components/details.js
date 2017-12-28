@@ -10,7 +10,7 @@ module.exports = [
       "number":"1748",
       "failRate":"6.29%",
       "textbook":"大学微积分（第二版） 上册",
-      "picture":"/static/calculate1.png",
+      "picture":"/static/calculate1.png",//pic
       "teachers":[
         {"name":"乐经良", "average":"74.81"},
         {"name":"何铭", "average":"76.25"},

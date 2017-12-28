@@ -29,7 +29,7 @@
 			<span class="info">书本</span>：{{detailselected.textbook}}
 			
 		</p>
-		<img v-bind:src="detailselected.picture" height="200" width="200"/>
+		<!--<img v-bind:src="detailselected.picture" height="200" width="200"/>-->
 	</div>
 </div>
 </div>
