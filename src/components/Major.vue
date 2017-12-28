@@ -22,9 +22,11 @@
                                         <div class="search-container">
                                             <input placeholder="输入专业名称查询" class="search-input" v-model="search" v-on:keyup="singleSearch()" v-on:click.stop />
                                         </div>
-                                        <ul class="option-ul-list bb">
+                                        <ul class="option-ul-list bb" >
                                             <li v-show= "displayOptions.length ==0 ">没有查询到数据</li>
-                                            <li v-for= "item in displayOptions" v-on:click.stop.prevent="singleSelect(item.id)" v-bind:key =" (item.id == selected.id)?'selected':'' ">{{item.name}}</li>
+                                            <li v-for= "item, index in displayOptions" v-on:click.stop.prevent="singleSelect(item.id)" v-bind:key =" (item.id == selected.id)?'selected':'' ">
+                                                <p class="finger" v-bind:style="{'background-color': (index === current_chosen) ? '#00eeee' : '#ffffff'}" v-on:mouseover="current_chosen=index;" @mouseleave="current_chosen=-1;">{{item.name}}</p>
+                                            </li>
                                         </ul>
                                     </div>
                             </div>
@@ -62,7 +64,8 @@
                 selected: {
                     id: "",
                     name: ""
-                }
+                },
+                current_chosen: -1,
             }
         },
         ready: function() {
@@ -142,6 +145,7 @@
                 this.search = "";
             }
         }
+    
     }
 
 </script>
@@ -309,5 +313,10 @@
   }
   .bb{
     text-align:left;
+  }
+
+  .finger {
+      cursor: pointer;
+      text-align: center;
   }
 </style>

@@ -23,7 +23,9 @@
                                         </div>
                                         <ul class="option-ul-list bb">
                                             <li v-show= "displayOptions.length ==0 ">没有查询到数据</li>
-                                            <li v-for= "item in displayOptions" v-on:click.stop.prevent="singleSelect(item.id)" v-bind:key =" (item.id == selected.id)?'selected':'' ">{{item.name}}</li>
+                                            <li v-for= "item , index in displayOptions" v-on:click.stop.prevent="singleSelect(item.id)" v-bind:key =" (item.id == selected.id)?'selected':'' ">
+                                                <p class="finger" v-bind:style="{'background-color': (index === current_chosen) ? '#00eeee' : '#ffffff'}" v-on:mouseover="current_chosen=index;" @mouseleave="current_chosen=-1;">{{item.name}}</p>
+                                            </li>
                                         </ul>
                                     </div>
                                 <!--<input ref="txtMajor" type = "专业选择" class ="form-control" @input="checkMajorValidation" id ="专业选择" placeholder = "专业名称" autofocus required />-->
@@ -55,7 +57,8 @@
                 selected: {
                     id: "",
                     name: ""
-                }
+                },
+                current_chosen: -1,
             }
         },
         ready: function() {
@@ -297,5 +300,9 @@
   }
   .btn{
     background-color:#e96d6d;
+  }
+  .finger {
+      cursor: pointer;
+      text-align: center;
   }
 </style>
