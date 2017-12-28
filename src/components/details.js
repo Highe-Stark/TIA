@@ -10,6 +10,7 @@ module.exports = [
       "number":"1748",
       "failRate":"6.29%",
       "textbook":"大学微积分（第二版） 上册",
+      "picture":"/static/calculate1.png",//pic
       "teachers":[
         {"name":"乐经良", "average":"74.81"},
         {"name":"何铭", "average":"76.25"},
@@ -29,6 +30,7 @@ module.exports = [
       "number":"1750",
       "failRate":"9.14%",
       "textbook":"大学微积分（第二版） 下册",
+      "picture":"/static/calculate2.png",
       "teachers":[
         {"name":"乐经良", "average":"74.81"},
         {"name":"何铭", "average":"76.25"},
@@ -77,7 +79,7 @@ module.exports = [
       "average":"74.22",
       "highest":"99",
       "number":"1750",
-      "failRate":"9.14%"
+      "failRate":"9.14%",
     },
     {"id":"PH001",
       "name":"大学物理（A类）（1）",
