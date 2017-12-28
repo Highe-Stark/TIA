@@ -146,7 +146,7 @@
 
 </script>
 
-<style >
+<style>
 /*@import '../../static/select-vue-component.css'*/
   @charset "UTF-8";
   body,div,section,ul,li,p,img,dl,dt,dd,table,tr,td,input,button,h1,h2,h3,h4,h5,h6,fieldset{margin: 0px;padding: 0px;font-family: "Microsoft Yahei";}

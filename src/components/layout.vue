@@ -3,7 +3,7 @@
     <div id="page">
       <div align="left">
         <a href='/' class="btn">
-          <span class="glyphicon glyphicon-menu-left"></span>
+          <span class="glyphicon glyphicon-home"></span>
         </a>
       </div>
       <h1 class="alert alert-primary">Comment</h1>
