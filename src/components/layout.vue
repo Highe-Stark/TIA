@@ -34,13 +34,13 @@
 </template>
 
 <script>
+import cmts from './cmts.js'
 export default {
   name: 'layout',
   data() {
     return {
       nothing:'',
-      comments:[
-      ]
+      comments: cmts
     }
   },
   methods: {
