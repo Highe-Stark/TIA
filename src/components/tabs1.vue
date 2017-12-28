@@ -25,9 +25,12 @@
 		</div>
 	</div>
 	<div class="tab-pane fade" id="data">
-		<p><span class="info">书本</span>：{{detailselected.textbook}}</p>
+		<p>
+			<span class="info">书本</span>：{{detailselected.textbook}}
+			
+		</p>
+		<img v-bind:src="detailselected.picture" height="200" width="200"/>
 	</div>
-
 </div>
 </div>
 </template>
