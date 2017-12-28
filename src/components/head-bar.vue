@@ -17,12 +17,14 @@ export default {
 </script>
 
 <style scoped>
+
 p{
-  margin-top: 0px;
+  margin-top: 15px;
   width:95vw;
 }
 .navbar-header a{
   padding-left: 15px;
   padding-right:0px;
 }
+
 </style>
