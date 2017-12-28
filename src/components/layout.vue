@@ -1,6 +1,9 @@
 <template>
   <div id="container1" class="container">
     <div id="page">
+      <div align='left'>
+        <a href='/'><span class="glyphicon glyphicon-home"></span></a>
+      </div>
       <h1 class="alert alert-primary">Comment</h1>
       <span id="cmt-pane" v-for="cmt in comments" v-bind:key="cmt.cmtWord" class="row">
         <div class="cmt row">
