@@ -1,10 +1,10 @@
 <template>
 <section >
   <head-bar headtext="问题详情"></head-bar>
-  <div  id="qa-detail" class="container" style="background-color:white">
+  <div  id="qa-detail" class="container" >
     <div class="col-xs-10 col-xs-offset-1 text-center panel panel-default"style="background-color: #FFFFFF;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444">
       <div class ="panel-body">
-      <p style="margin-top:25px">{{item.question}}</p>
+      <p style="margin-top:25px;font-size:15px">{{item.question}}</p>
       <p class="text-right" >{{'——'+item.name+' '+item.time}}</p>
     </div>
     </div>
@@ -14,7 +14,7 @@
     <table class="table">
       <tbody class="text-center" v-for="ele in list">
         <td style="height:100px">
-          <p>{{ele.answer}}</p>
+          <p style="font-size:15px">{{ele.answer}}</p>
           <p class="text-right" style="margin-right:100px;margin-bottom:0px">{{'——'+ele.name+' '+ele.time}}</p>
         </td>
       </tbody>
@@ -82,7 +82,7 @@ export default{
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 120px;
+  margin-top: 130px;
 }
 #split-border{
   border:1px solid grey;

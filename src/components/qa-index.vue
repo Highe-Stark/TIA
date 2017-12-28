@@ -2,18 +2,18 @@
   <div id = "qa-index" class="container text-center">
       <table class="table table-hover">
 	       <caption style="font-size:40px;color: #2c3e50">问答区</caption>
-          <thead>
+          <thead  style="margin-top:20px">
             <tr>
-              <th class="text-center">问题</th>
-              <th class="text-center">提问人</th>
-              <th class="text-center">时间</th>
+              <th class="text-center" style="font-size:20px">问题</th>
+              <th class="text-center" style="font-size:20px">提问人</th>
+              <th class="text-center" style="font-size:20px">时间</th>
             </tr>
           </thead>
           <tbody v-for="(todo, index) in todos">
             <tr>
-              <td class="text-left"><router-link :to="{ name: 'qaDetail', params:{id: index} }">{{todo.question}}</router-link></td>
-              <td>{{todo.name}}</td>
-              <td>{{todo.time}}</td>
+              <td class="text-left" style="font-size:15px"><router-link :to="{ name: 'qaDetail', params:{id: index} }">{{todo.question}}</router-link></td>
+              <td style="font-size:15px">{{todo.name}}</td>
+              <td style="font-size:15px">{{todo.time}}</td>
             </tr>
           </tbody>
       </table>
@@ -73,9 +73,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 70px;
 }
 a {
   color: #42b983;
 }
+
+
 </style>
