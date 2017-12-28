@@ -11,9 +11,6 @@
       <majors />
     </div>
 
-    <div>
-      <tabs2 />
-    </div>
     <hr />
     <div class="col-sm-4" id="row">
       <div class="panel panel-danger box1" id="column">
@@ -50,7 +47,6 @@ export default {
   components: {
     navbargod,
     majors,
-    tabs2
   }
 }
 </script>
