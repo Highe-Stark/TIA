@@ -29,7 +29,7 @@ import tabs1 from './tabs1.vue'
 
 export default {
   name:"DoC",
-  ready: function(){
+  /*ready: function(){
     this.selectedid = id;
     var details = this.details;
     var id = this.selectedid;
@@ -51,7 +51,7 @@ export default {
             detailselected.textbook = item.textbook;
         }
       }
-  },
+  },*/
 
   data(){
       return{
@@ -67,17 +67,7 @@ export default {
         },
       }
   },
-  watch: {
-    '$route': 'getParams'
-},
   methods: {
-    getParams () {
-        // 取到路由带过来的参数
-        var sid = this.$route.query.id;
-        // 将数据放在当前组件的数据内
-        this.selectedid = sid;
-      },
-
     pass(id){
       this.selectedid = id;
       var details = this.details;

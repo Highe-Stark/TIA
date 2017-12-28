@@ -28,7 +28,6 @@
         <div class="panel-body">
           Waiting for comment...
         </div>
-        <p>{{name}}</p>
       </div>
 
     </div>
