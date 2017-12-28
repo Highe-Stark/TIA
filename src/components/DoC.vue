@@ -88,7 +88,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 #headdd{
   width:100%;
 }

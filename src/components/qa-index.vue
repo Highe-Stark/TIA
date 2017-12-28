@@ -1,10 +1,5 @@
 <template>
   <div id = "qa-index" class="container text-center">
-    <div align="left">
-      <a href='/' class="btn">
-        <span class="glyphicon glyphicon-home"></span>
-      </a>
-    </div>
       <table class="table table-hover">
 	       <caption style="font-size:40px;color: #2c3e50">问答区</caption>
           <thead  style="margin-top:20px">

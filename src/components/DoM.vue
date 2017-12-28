@@ -21,14 +21,14 @@
           <p>{{questions[0].question}}</p>
         </div>
       </div>
-              <div class="panel panel-info box2" id="column">
-                <div class="panel-heading">
-                  <h3 class="panel-title"><router-link :to="{ name: 'layout' }">评论区</router-link></h3>
-                </div>
-                <div class="panel-body">
-                  Panel content
-                </div>
-              </div>
+      <div class="panel panel-info box2" id="column">
+        <div class="panel-heading">
+          <h3 class="panel-title"><router-link :to="{ name: 'layout' }">评论区</router-link></h3>
+        </div>
+        <div class="panel-body">
+          Waiting for comment...
+        </div>
+      </div>
 
     </div>
   </div>
@@ -55,7 +55,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 #headdd{
   width:100%
 }
