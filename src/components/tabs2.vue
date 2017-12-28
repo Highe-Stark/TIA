@@ -3,13 +3,17 @@
 <ul id="myTab" class="nav nav-tabs">
 	<li class="active">
 		<a href="#home" data-toggle="tab">
-			 基本信息
+			 专业简介
 		</a>
 	</li>
-	<li><a href="#ios" data-toggle="tab">培养计划</a></li>
+	<li>
+		<a href="#ios" data-toggle="tab">
+			培养计划
+		</a>
+	</li>
 	<li>
 		<a href="#data" data-toggle="tab">
-			 数据
+			 毕业情况
 		</a>
 	</li>
 </ul>
@@ -17,9 +21,11 @@
 	<div class="tab-pane fade in active" id="home">
 		<pre class = "text-left">{{detailselected.information}}</pre>
 	</div>
-	<div class="tab-pane fade" id="ios">
-		<p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple
-			TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。</p>
+	<div class="tab-pane fade" id="ios"  style="margin-top:20px">
+		<div v-for="item in detailselected.data">
+			<img v-bind:src="item.sources" />
+		</div>
+
 	</div>
 	<div class="tab-pane fade" id="data">
 		<br />
