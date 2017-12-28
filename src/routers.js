@@ -6,6 +6,7 @@ import DoM from './components/DoM'
 import qaIndex from './components/qa-index'
 import qaDetail from './components/qa-detail'
 import layout from './components/layout'
+import download from './components/download'
 
 const routers = [
     {
@@ -42,6 +43,12 @@ const routers = [
       path: '/DoM',
       name: 'DoM',
       component: DoM
+    },
+    {
+      path: '/download',
+      name: 'download',
+      component: download
+
     },
     {
       path: '/qaIndex',
